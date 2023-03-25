@@ -22,3 +22,8 @@ def show():
     with open('data/expenses.txt', 'r') as f:
         for line in f:
             print(line.strip())
+
+def reset():
+    """ This function deletes the data from expenses.txt """
+    with open('data/expenses.txt', 'w') as f:
+        f..write("")
