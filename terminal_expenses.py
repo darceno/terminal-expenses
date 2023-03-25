@@ -11,8 +11,14 @@ def add():
                 new_expense = input("New expense: ")
 
 def total():
-    """ This function reads the expenses.txt file and converts each line into a float, adding them to a expenses list. The total invoice amount is obtained by summing the list"""
+    """ This function reads the expenses.txt file and converts each line into a float, adding them to a expenses list. The total invoice amount is obtained by summing the list """
     with open('data/expenses.txt', 'r') as f:
         expenses = [float(line.strip()) for line in f]
         total = sum(expenses)
         print(f"Total invoice amount: ${total}")
+
+def show():
+    """ This function just prints each line of the expenses.txt without whitespace between them """
+    with open('data/expenses.txt', 'r') as f:
+        for line in f:
+            print(line.strip())
