@@ -26,4 +26,4 @@ def show():
 def reset():
     """ This function deletes the data from expenses.txt """
     with open('data/expenses.txt', 'w') as f:
-        f..write("")
+        f.write("")
