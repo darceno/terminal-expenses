@@ -27,3 +27,21 @@ def reset():
     """ This function deletes the data from expenses.txt """
     with open('data/expenses.txt', 'w') as f:
         f.write("")
+
+def set_ceiling():
+    """ This function sets the ceiling - the ideal expenses cap the user wants in the month """
+    with open('data/ceiling.txt', 'w') as f:
+        new_ceiling = input("New ceiling: ")
+        f.write("")
+        f.write(new_ceiling)
+
+def ceiling():
+    """ This function shows the ceiling and the remaining money left from it """
+    with open('data/ceiling.txt', 'r') as c:
+        ceiling_list = [float(line) for line in c]
+        ceiling = sum(ceiling_list)
+    with open('data/expenses.txt', 'r') as f:
+        expenses = [float(line.strip()) for line in f]
+        total = sum(expenses)
+    remaining = ceiling - total
+    print(f"Ceiling: ${ceiling} \nMoney spent: ${total} \nMoney left: ${remaining}")
