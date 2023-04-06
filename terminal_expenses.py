@@ -49,3 +49,32 @@ def ceiling():
 def help():
     """ This function prints a short description of the program, as well as a list of possible commands """
     print("\nHello! This is a very basic program to calculate expenses\n \n\033[1mList of commands: \033[0m\nadd — for storing a new expense \nshow — for displaying a list of of every expense \ntotal - for displaying the total value of every summed expense \nreset — for reseting the list of expenses to $0 \nset ceiling — for setting a new ceiling value, the maximum money you can spend \nceiling — for showing how much money you still have avaliable, based on the ceiling value \nhelp — for reading this again\n")
+
+def main():
+    """ Function to initialize the program """
+    command = input("Command: ")
+    if command == "add":
+        add()
+        main()
+    elif command == "total":
+        total()
+        main()
+    elif command == "show":
+        show()
+        main()
+    elif command == "reset":
+        reset()
+        main()
+    elif command == "set ceiling":
+        set_ceiling()
+        main()
+    elif command == "ceiling":
+        ceiling()
+        main()
+    elif command == "help":
+        help()
+        main()
+    else:
+        print('Unknown command. Type "help" for a list of possible commands')
+
+main()
