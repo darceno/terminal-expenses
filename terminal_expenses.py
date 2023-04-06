@@ -18,7 +18,7 @@ def total():
         print(f"Total invoice amount: ${total}")
 
 def show():
-    """ This function just prints each line of the expenses.txt without whitespace between them """
+    """ This function print each line of the expenses.txt without whitespace between them """
     with open('data/expenses.txt', 'r') as f:
         for line in f:
             print(line.strip())
