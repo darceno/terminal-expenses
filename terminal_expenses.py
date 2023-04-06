@@ -45,3 +45,7 @@ def ceiling():
         total = sum(expenses)
     remaining = ceiling - total
     print(f"Ceiling: ${ceiling} \nMoney spent: ${total} \nMoney left: ${remaining}")
+
+def help():
+    """ This function prints a short description of the program, as well as a list of possible commands """
+    print("Hello! This is a very basic program to calculate expenses\n \n\033[1mList of commands: \033[0m\nadd — for storing a new expense \nshow — for displaying a list of of every expense \ntotal - for displaying the total value of every summed expense \nreset — for reseting the list of expenses to $0 \nset ceiling — for setting a new ceiling value, the maximum money you can spend \nceiling — for showing how much money you still have avaliable, based on the ceiling value \nhelp — for reading this again")
