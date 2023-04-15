@@ -76,5 +76,6 @@ def main():
         main()
     else:
         print('Unknown command. Type "help" for a list of possible commands')
+        main()
 
 main()
